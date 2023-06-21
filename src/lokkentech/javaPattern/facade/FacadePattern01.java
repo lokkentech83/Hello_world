@@ -8,44 +8,44 @@ package lokkentech.javaPattern.facade;
 public class FacadePattern01 {
 
 
-	
-	public class WashMachine {
-		
-		// 물온도
-		private int temperature = 0;
+    
+    public class WashMachine {
+        
+        // 물온도
+        private int temperature = 0;
 
-		// 복잡한 내부 처리는 메소드 내부에서 처리되므로 호출만으로 기능을 표현
-		public void washModeHeavy() {
-			setTemperature(100);
-			startWash();
-		}
+        // 복잡한 내부 처리는 메소드 내부에서 처리되므로 호출만으로 기능을 표현
+        public void washModeHeavy() {
+            setTemperature(100);
+            startWash();
+        }
 
-		public void washModeLight() {
-			setTemperature(40);
-			startWash();
-		}
+        public void washModeLight() {
+            setTemperature(40);
+            startWash();
+        }
 
-		// 빨래를 개시한다.
-		private void startWash() {
-			System.out.println("빨래를 시작합니다.");
-		}
+        // 빨래를 개시한다.
+        private void startWash() {
+            System.out.println("빨래를 시작합니다.");
+        }
 
 
-		public int getTemperature() {
-			return temperature;
-		}
+        public int getTemperature() {
+            return temperature;
+        }
 
-		public void setTemperature(int temperature) {
-			this.temperature = temperature;
-		}
+        public void setTemperature(int temperature) {
+            this.temperature = temperature;
+        }
 
-		
-	}
+        
+    }
 
-	public static void main(String[] args) {
-		FacadePattern01 f = new FacadePattern01();
-		f.new WashMachine().washModeHeavy(); // 퍼사드 패턴의 사용
-	}
+    public static void main(String[] args) {
+        FacadePattern01 f = new FacadePattern01();
+        f.new WashMachine().washModeHeavy(); // 퍼사드 패턴의 사용
+    }
     
 
 }
